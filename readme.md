@@ -2,6 +2,7 @@
 ```
 $ composer global require ospek/ospek-cli
 ```
+or download single executable [ospek.phar](https://github.com/os-pek/ospek-cli/raw/phar/ospek.phar)
 
  **Start php in background:** 
 ```
