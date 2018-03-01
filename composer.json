@@ -1,0 +1,33 @@
+{
+    "name": "ospek/ospek-cli",
+    "description": "run php file and command in background",
+    "keywords": [
+        "process",
+        "background",
+        "daemon",
+        "windows",
+        "Linux",
+        "osx",
+        "ospek"
+    ],
+    "homepage": "https://os-pek.github.io",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ospek project",
+            "email": "os-pek@github.io"
+        }
+    ],
+    "require": {
+        "php" : ">=7.0.0",
+        "ospek/ospek": "^1.0",
+        "symfony/console": "^4.0"
+        },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "OspekCli\\": "src/"
+        }
+    },
+    "bin": ["bin/ospek"]
+}
