@@ -13,14 +13,14 @@ class OspekSh extends Command
         $this->setName("sh")
             ->setDescription("start sh")
             ->setHelp("run any program/command in background")
-            ->addArgument('command', InputArgument::REQUIRED, 'command to be executed')
+            ->addArgument('cmd', InputArgument::REQUIRED, 'command to be executed')
             ->addOption('pid', 'p', InputOption::VALUE_OPTIONAL, 'path file to store pid')
             ->addOption('output', 'o', InputOption::VALUE_OPTIONAL, 'path file to store output process');
     }
     
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $command = $input->getArgument("command");
+        $command = $input->getArgument("cmd");
         $out = $input->getOption("output");
         if($out) {
             $_ospek = new \Ospek\OspekBackend($command, $out);

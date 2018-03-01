@@ -1,6 +1,6 @@
  **Install:** 
 ```
-$ composer require -g ospek/ospek-cli
+$ composer global require ospek/ospek-cli
 ```
 
  **Start php in background:** 

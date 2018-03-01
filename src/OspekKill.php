@@ -19,12 +19,12 @@ class OspekKill extends Command
     
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $_ospek = new \Ospek\Backend();
+        $_ospek = new \Ospek\OspekBackend();
         $ispid = true;
         if($input->getArgument("pid")) {
             $pid = (int)$input->getArgument("pid");
             $_ospek->setPid($pid);
-        } elseif($input->getOption("file") && file_exist($input->getOption("file"))) {
+        } elseif($input->getOption("file") && file_exists($input->getOption("file"))) {
             $pid = (int)file_get_contents($input->getOption("file"));
             $_ospek->setPid($pid);
         } else{
