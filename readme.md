@@ -1,8 +1,18 @@
+[![Build Status](https://travis-ci.org/os-pek/ospek-cli.svg?branch=master)](https://travis-ci.org/os-pek/ospek-cli)
+
  **Install:** 
 ```
 $ composer global require ospek/ospek-cli
 ```
-or download single executable [ospek.phar](https://github.com/os-pek/ospek-cli/raw/phar/ospek.phar)
+or build
+```
+$ git clone https://github.com/os-pek/ospek-cli.git
+$ cd ospek-cli
+$ composer install
+$ ./vendor/bin/box build
+$ mv ospek.phar /local/bin/ospek
+```
+
 
  **Start php in background:** 
 ```
@@ -28,7 +38,7 @@ $ ospek kill <pid>
 
 **Start other program:** 
 ```
-$ ospek sh <"command">
+$ ospek sh <'command'>
 ```
 option:
   - --pid , -p : path file to store pid
