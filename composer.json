@@ -20,7 +20,7 @@
     ],
     "require": {
         "php" : ">=7.0.0",
-        "ospek/ospek": "dev-master",
+        "ospek/ospek": "~1.0",
         "symfony/console": "~4.0|~3.3.16"
         },
     "require-dev": {
