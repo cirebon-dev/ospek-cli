@@ -1,0 +1,9 @@
+/.idea
+/test.log
+/test.pid
+/ospek.phar
+/phpcs-report.txt
+/composer.lock
+/vendor
+/task.php
+/.gitlab-ci.yml

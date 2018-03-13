@@ -1,0 +1,29 @@
+language: php
+
+php:
+  - 7.0
+  - 7.1
+  - 7.2
+  - master
+
+sudo: false
+
+before_install:
+  - composer self-update
+  - composer clear-cache
+
+install:
+  - travis_retry composer update --no-interaction --no-ansi --no-progress --no-suggest --optimize-autoloader --prefer-stable
+
+script:
+  - ./vendor/bin/box build
+  - ./ospek.phar start tests/loop.php -p test.pid -o test.log
+  - ./ospek.phar status -f test.pid
+  - ./ospek.phar kill -f test.pid
+  - cat test.log
+
+after_success:
+  - echo "success!"
+
+notifications:
+  email: false
